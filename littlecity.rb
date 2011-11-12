@@ -9,7 +9,7 @@ end
 get '/form' do
   "<html><body>
   <form method='post'>
-  <input type='text' name='eggs'/>
+  Dozens of eggs: <input type='text' name='eggs'/>
   <input type='submit' value='Submit'/>
   </form>
   </body></html>"
