@@ -1,18 +1,23 @@
 require 'sinatra'
+require 'data_mapper'
+
+DataMapper.setup(:default, 'sqlite://littlecity.db')
+class Item 
+  include DataMapper::Resource
+  
+  property :id, Serial
+  property :name, String
+  property :quantity, Float
+  property :units, String
+  property :price, Float
+end
 
 get "/" do
-  "<html><body>
-  <a href='/form'>View form</a>
-  </body></html>"
+  erb :home
 end
 
 get '/form' do
-  "<html><body>
-  <form method='post'>
-  Dozens of eggs: <input type='text' name='eggs'/>
-  <input type='submit' value='Submit'/>
-  </form>
-  </body></html>"
+  erb :form
 end
 
 post "/form" do
