@@ -16,5 +16,7 @@ get '/form' do
 end
 
 post "/form" do
-  "Eggs: #{params[:eggs]}"
+  num_eggs = params[:eggs].to_i
+  cost = 5 # per dozen
+  "Eggs: #{num_eggs} dozen at $#{cost}/dozen = $#{cost * num_eggs}"
 end
