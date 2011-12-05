@@ -1,0 +1,18 @@
+<html>
+<body>
+  
+  <form method="post">
+    Name: <input type="text" name="name"/><br/>
+    Units: <input type="text" value="Pound" name="units"/><br/>
+    Price: <input type="text" name="price"/><br/>
+    <input type="submit" value="Add Item"/>
+  </form>
+  
+  <ul>
+  <% @items.each do |item| %>
+    <li><%= item.name %> $<%= item.price %> per <%=item.units %> </li>
+  <% end %>
+  </ul>
+  
+</body>
+</html>
