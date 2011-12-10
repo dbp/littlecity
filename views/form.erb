@@ -1,10 +1,14 @@
 <html>
-  <body>
-    <form method='post'>
-      Dozens of eggs: <input type='text' name='eggs' size="3" maxlength="3" /><br>
-      Pounds of peas: <input type='text' name='peas' size="3" maxlength="3" />
+<body>
 
-      <input type='submit' value='Submit'/>
-    </form>
-  </body>
+<form method="post">
+<% @items.each do |item| %>
+  <li><%= item.name %> $<%= item.price %> per <%=item.units %> 
+  Quantity ordered : <input type="text" name="<%= item.id %>"/><br/>  
+<% end %>
+  <br>
+  <input type="submit" value="Place Order"/>
+</form>
+
+</body>
 </html>

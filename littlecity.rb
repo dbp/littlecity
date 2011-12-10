@@ -23,18 +23,14 @@ get "/" do
 end
 
 get "/form" do
+  @items = Item.all
   erb :form
 end
 
 post "/form" do
-  @number_of_eggs = params[:eggs].to_i
-  @eggs_price = 5 # per dozen
-  @eggs_cost = @eggs_price * @number_of_eggs
-    
-  @number_of_peas = params[:peas].to_i
-  @peas_price = 6 # per pound
-  @peas_cost = @peas_price * @number_of_peas
   
+  # this is where we were working... - daniel @ Dec 10, 2011
+    
   erb :calculation
 end
 
