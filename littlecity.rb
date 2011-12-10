@@ -2,7 +2,7 @@ require 'sinatra'
 require 'data_mapper'
 
 # need install dm-sqlite-adapter
-DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/littlecity.db")
+DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/littlecity.db")
 
 class Item
   include DataMapper::Resource
