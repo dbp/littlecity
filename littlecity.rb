@@ -12,6 +12,7 @@ class Item
   property :quantity, Float
   property :units, String
   property :price, Float
+  property :available, Float
 end
 
 # automatically create the post table

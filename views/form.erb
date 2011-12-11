@@ -24,7 +24,8 @@
 <td width="75" align="center"> <%= item.name %></td> 
 <td width="75" align="center">$<%= item.price %> 
 <td width="75" align="left"><strong>per <%=item.units %> 
-  Quantity ordered : <input type="text" name="<%= item.id %>"/><br/>  
+<td width="75" align="center">$<%= item.available %> 
+  <strong>Quantity ordered : <input type="text" name="<%= item.id %>"/><br/>  
 <% end %>
   <br>
   <input type="submit" value="Place Order"/>
