@@ -22,7 +22,8 @@
 <form method="post">
 <% @items.each do |item| %>
 <td width="75" align="center"> <%= item.name %></td> 
-<td width="75" align="center">$<%= item.price %> per <%=item.units %> 
+<td width="75" align="center">$<%= item.price %> 
+<td width="75" align="left"><strong>per <%=item.units %> 
   Quantity ordered : <input type="text" name="<%= item.id %>"/><br/>  
 <% end %>
   <br>
