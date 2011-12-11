@@ -3,7 +3,7 @@
 
 <form method="post">
 <% @items.each do |item| %>
-  <li> <td width="75" align="center"> <%= item.name %></td> $<%= item.price %> per <%=item.units %> 
+<td width="75" align="center"> <%= item.name %></td> $<%= item.price %> per <%=item.units %> 
   Quantity ordered : <input type="text" name="<%= item.id %>"/><br/>  
 <% end %>
   <br>
