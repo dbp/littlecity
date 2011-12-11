@@ -1,30 +1,12 @@
 
-
-  <table width="700" align="center" cellpadding="1" cellspacing="0" class="menuborder">
-  <tr>
-  <td width="200"><br />
-    <strong>Product List 6/17/11</strong><br> </td>
-  <td width="75" align="left"><strong>Price<br />
-  </strong></td>
-  <td width="75" align="left"><strong>Per Unit</strong><br /></td>
-  <td width="75" align="center"><strong>Amount Available</strong></td><br />
-  <td width="75" align="center"> 
-    <strong>Your Order</strong></td>
-  </tr>
-
-
- <tr>
-  <td colspan="5">&nbsp;</td>
-  </tr>
-
 <body>
 
 <form method="post">
 <% @items.each do |item| %>
 <td width="75" align="center"> <%= item.name %></td> 
-<td width="75" align="center">$<%= item.price %> 
-<td width="75" align="left"><strong>per <%=item.units %> 
-<td width="75" align="center">$<%= item.available %> 
+<td width="75" align="center">$<%= item.price %> </td>
+<td width="75" align="left"><strong>per <%=item.units %> </td>
+<td width="75" align="center">$<%= item.available %> </td>
   <strong>Quantity ordered : <input type="text" name="<%= item.id %>"/><br/>  
 <% end %>
   <br>
