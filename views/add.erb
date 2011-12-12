@@ -12,7 +12,7 @@
   <ul>
   <% @items.each do |item| %>
     <li><%= item.name %><form method="post">
-    Name: <input type="text" name="name"/><br/> $<%= item.price %> per <%=item.units %> </li>
+    <input type="text" name="name"/> $<%= item.price %> per <%=item.units %> </li>
   <% end %>
   </ul>
   
