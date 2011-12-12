@@ -9,10 +9,10 @@
     <input type="submit" value="Add Item"/>
   </form>
   
-  <ul>
+  
   <% @items.each do |item| %>
-    <%= item.name %><form method="post">
-    <input type="text" name="name"/> $<%= item.price %> per <%=item.units %>
+    <li><%= item.name %><form method="post">
+    <input type="text" name="name"/> $<%= item.price %> per <%=item.units %> </li>
   <% end %>
   </ul>
   
