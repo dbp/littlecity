@@ -3,7 +3,7 @@
 
 <a href="/add">add</a><br/>
 
-<ul>
+
 <% @items.each do |item| %>
   <li><%= item.name %> $<%= item.price %> per <%=item.units %> 
     <a href="/remove?id=<%= item.id %>">remove</a> </li> 
