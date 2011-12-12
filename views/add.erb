@@ -11,8 +11,8 @@
   
   <ul>
   <% @items.each do |item| %>
-    <li><%= item.name %><form method="post">
-    <input type="text" name="name"/> $<%= item.price %> per <%=item.units %> </li>
+    <%= item.name %><form method="post">
+    <input type="text" name="name"/> $<%= item.price %> per <%=item.units %>
   <% end %>
   </ul>
   
