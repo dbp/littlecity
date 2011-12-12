@@ -17,7 +17,7 @@
 <% @items.each do |item| %>
   <tr>
               <td><%= item.name %></td><td> $<%= item.price %> </td><td> <%=item.units %></td> 
-<td></td><td><input type="text" name="<%= item.id %>"/><br/></td>  
+<td></td><td align="center"><input type="text" name="<%= item.id %>"/><br/></td>  
 <% end %>
   <br>
   <input type="submit" value="Place Order"/>
