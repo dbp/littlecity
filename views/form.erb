@@ -1,13 +1,11 @@
 
+<html>
 <body>
 
 <form method="post">
 <% @items.each do |item| %>
-<td width="75" align="center"> <%= item.name %></td> 
-<td width="75" align="center">$<%= item.price %> </td>
-<td width="75" align="left"><strong>per <%=item.units %> </td>
-<td width="75" align="center">$<%= item.available %> </td>
-  <strong>Quantity ordered : <input type="text" name="<%= item.id %>"/><br/>  
+  <li><%= item.name %> $<%= item.price %> per <%=item.units %> 
+  Quantity ordered : <input type="text" name="<%= item.id %>"/><br/>  
 <% end %>
   <br>
   <input type="submit" value="Place Order"/>

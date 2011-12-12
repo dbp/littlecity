@@ -12,7 +12,6 @@ class Item
   property :quantity, Float
   property :units, String
   property :price, Float
-  property :available, Float
 end
 
 # automatically create the post table
@@ -49,8 +48,7 @@ post "/add" do
   Item.create(:name => params["name"], 
               :units => params["units"], 
               :quantity => 0, 
-              :price => params["price"]
-              :available => params["available"])
+              :price => params["price"].to_f)
   redirect "/list"
 end
 
@@ -63,3 +61,4 @@ post "/remove" do
   item.destroy
   redirect "/list"
 end
+
