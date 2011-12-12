@@ -1,11 +1,23 @@
 <html>
 <body>
 
+<table width="700" align="center" cellpadding="1" cellspacing="0" class="menuborder">
+  <tr>
+  <td width="200"><br />
+    <strong>Product List 6/17/11</strong><br> </td>
+  <td width="75" align="left"><strong>Price<br />
+  </strong></td>
+  <td width="75" align="left"><strong>Per Unit</strong><br /></td>
+  <td width="75" align="center"><strong>Amount Available</strong></td><br />
+  <td width="75" align="center"> 
+    <strong>Your Order</strong></td>
+  </tr>
+
 <a href="/add">add</a><br/>
 
 <ul>
 <% @items.each do |item| %>
-  <%= item.name %> $<%= item.price %> per <%=item.units %> 
+  <li><%= item.name %> $<%= item.price %> per <%=item.units %> 
     <a href="/remove?id=<%= item.id %>">remove</a> </li> 
 <% end %>
 </ul>
