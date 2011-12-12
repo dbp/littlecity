@@ -5,7 +5,7 @@
 <form method="post">
 <% @items.each do |item| %>
   <li><%= item.name %> $<%= item.price %> per <%=item.units %> 
-  Quantity ordered : <input type="text" name="<%= item.id %>"/><br/>  
+<input type="text" name="<%= item.id %>"/><br/>  
 <% end %>
   <br>
   <input type="submit" value="Place Order"/>
