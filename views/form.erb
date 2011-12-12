@@ -16,7 +16,7 @@
 <form method="post">
 <% @items.each do |item| %>
   <tr>
-              <td><li><%= item.name %></td><td> $<%= item.price %> </td><td>per <%=item.units %></td> 
+              <td><%= item.name %></td><td> $<%= item.price %> </td><td>per <%=item.units %></td> 
 <td></td><td><input type="text" name="<%= item.id %>"/><br/></td>  
 <% end %>
   <br>
