@@ -12,6 +12,7 @@ class Item
   property :quantity, Float
   property :units, String
   property :price, Float
+  property :available, Float
 end
 
 # automatically create the post table
@@ -48,7 +49,9 @@ post "/add" do
   Item.create(:name => params["name"], 
               :units => params["units"], 
               :quantity => 0, 
-              :price => params["price"].to_f)
+              :price => params["price"].to_f
+              :available => params["available"].to_f)
+              
   redirect "/list"
 end
 
