@@ -17,7 +17,8 @@
 
 <ul>
 <% @items.each do |item| %>
-  <li><%= item.name %> $<%= item.price %> per <%=item.units %>
+  <tr>
+              <td><%= item.name %></td><td> $<%= item.price %> </td><td> <%=item.units %></td> 
     <a href="/remove?id=<%= item.id %>">remove</a> </li> 
 <% end %>
 </ul>
