@@ -53,7 +53,16 @@ post "/add" do
               
   redirect "/list"
 end
+get "/edit" do
+@item = Item.get(params["id"].to_i)
+  erb :edit
+end
 
+post "/edit" do
+  item = Item.get(params["id"].to_i)
+  
+  redirect "/list"
+end
 get "/remove" do
   erb :remove
 end
