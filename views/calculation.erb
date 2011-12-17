@@ -16,12 +16,14 @@
 <tr>
  <td><%= order_item[:name] %></td>
  <td><%= order_item[:price] %></td>
+ <td><%= order_item[:unit] %></td>
+ <td><%= order_item[:quantity_ordered] %></td>
  <td><%= order_item[:paying] %></td>
 
 
 <% end %>
 
-<td>Total Price:
+<td>Total Order: $
 	 <%= @total_price.to_s %></td>
 
 
