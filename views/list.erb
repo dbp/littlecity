@@ -13,7 +13,17 @@
   </tr>
 
 <a href="/add">add</a><br/>
-
+# pasted here
+<form method="post">
+  
+    Name: <input type="text" value="<%=@item.name%>" name="name"/>
+    Units: <input type="text" value="<%=@item.units%>" name="units"/>
+    Price: <input type="text" value="<%=@item.price%>" name="price"/>
+    Available: <input type="text" value="<%=@item.quantity%>" name="quantity"/><br/>
+ 
+    <input type="submit" value="Edit Item"/>
+    </form>
+    #ended paste here
 <ul>
 <% @items.each do |item| %>
   <tr>
