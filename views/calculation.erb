@@ -1,9 +1,20 @@
 <html>
 <body>
-Ordered:
+<table width="700" align="center" cellpadding="1" cellspacing="0" class="menuborder">
+  <tr>
+  <td width="200"><br />
+    <strong>Hi!</strong><br> </td>
+  <td width="75" align="left"><strong>Price<br />
+  </strong></td>
+  <td width="75" align="left"><strong>Per Unit</strong><br /></td>
+  <td width="75" align="center"><strong>Amount Available</strong></td><br />
+  <td width="75" align="center"> 
+    <strong>Your Order</strong></td>
+  </tr>
+
 <% @ordered.each do |order_item| %>
 
-Item: <%= order_item[:name] %>
+<%= order_item[:name] %>
 
 
 <% end %>
