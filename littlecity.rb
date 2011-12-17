@@ -31,7 +31,7 @@ end
 post "/form" do
   
   # this is where we were working... - daniel @ Dec 10, 2011
-    
+  @items = Item.all  
   erb :calculation
 end
 
