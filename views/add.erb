@@ -3,7 +3,7 @@
   
   <form method="post">
   <% @items.each do |item| %>
-    <%= item.name %> Name: <input type="text" name="name"/><br/>
+    <%= item.name %> Name: <input type="text" name="name"/>
     <%=item.units %> Units: <input type="text" value="lb" name="units"/><br/>
     $<%= item.price %> Price: <input type="text" name="price"/><br/>
     Available: <input type="text" name="available"/><br/>
