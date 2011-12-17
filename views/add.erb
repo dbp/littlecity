@@ -2,10 +2,12 @@
 <body>
   
   <form method="post">
-    Name: <input type="text" name="name"/><br/>
-    Units: <input type="text" value="lb" name="units"/><br/>
-    Price: <input type="text" name="price"/><br/>
+  <% @items.each do |item| %>
+    <%= item.name %> Name: <input type="text" name="name"/><br/>
+    <%=item.units %> Units: <input type="text" value="lb" name="units"/><br/>
+    $<%= item.price %> Price: <input type="text" name="price"/><br/>
     Available: <input type="text" name="available"/><br/>
+    <% end %>
     <input type="submit" value="Add Item"/>
   </form>
   
