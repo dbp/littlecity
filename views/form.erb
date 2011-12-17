@@ -18,7 +18,7 @@
 <% @items.each do |item| %>
 
   <tr>
-              <td><%= item.name %></td><td> $<%= item.price %> </td><td> <%=item.units %></td> <td align="center"> <%=item.quantity %></td>
+              <td><%= item.name %></td><td> $<%= item.price %> </td><td> <%=item.units %></td> <td align="center"> <%=item.quantity.to_s %></td>
 <td align="center"><input size="3" maxlength="3" type="float" name="<%= item.id %>"/><br/></td>  
 <% end %>
   <br>
