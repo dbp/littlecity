@@ -60,7 +60,7 @@ end
 
 post "/edit" do
   item = Item.get(params["id"].to_i)
-  
+  item.update(params)
   redirect "/list"
 end
 get "/remove" do
