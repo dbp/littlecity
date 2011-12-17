@@ -46,6 +46,10 @@ end
 
 get "/list" do
   @items = Item.all
+  item.update(:name => params["name"], 
+              :units => params["units"], 
+              :quantity => params["quantity"], 
+              :price => params["price"].to_f)
   erb :list
 end
 
