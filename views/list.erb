@@ -18,8 +18,10 @@
 <ul>
 <% @items.each do |item| %>
   <tr>
-              <td><%= item.name %></td><td> $<%= item.price %> </td><td> <%=item.units %></td> 
-    <a href="/remove?id=<%= item.id %>">remove</a> </li> 
+              <td><%= item.name %></td>
+              <td>$<%= item.price %> </td>
+              <td><%=item.units %></td> 
+    <td><a href="/remove?id=<%= item.id %>">remove</a></td>
 <% end %>
 </ul>
 
