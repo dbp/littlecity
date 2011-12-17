@@ -1,7 +1,16 @@
 <html>
 <body>
+Ordered:
+<% @ordered.each do |order_item| %>
 
-<%= params.to_s %>
+Item: <%= order_item[:name] %>
+
+<% end %>
+
+Total Price:
+	<%= @total_price.to_s %>
+
+
 
    </body>
 </html>

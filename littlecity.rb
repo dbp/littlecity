@@ -29,9 +29,18 @@ get "/form" do
 end
 
 post "/form" do
+  @ordered = []
+  @total_price = 0
+  params.each do |item_id,quantity_ordered|
+    item = Item.get(item_id.to_i)
+    paying = quantity_ordered.to_f * item.price
+    item.update(:quantity => item.quantity - quantity_ordered.to_f)
+    @ordered = @ordered + [{:name => item.name, 
+                            :paying => paying, 
+                            :price => item.price}] unless quantity_ordered.to_f == 0
+    @total_price = @total_price + paying
+  end
   
-  # this is where we were working... - daniel @ Dec 10, 2011
-  @items = Item.all  
   erb :calculation
 end
 
