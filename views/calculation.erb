@@ -14,7 +14,10 @@
 
  <% @ordered.each do |order_item| %>
 
- <td><%= order_item[:name] %></td><td><%= order_item[:price] %></td>
+ <td><%= order_item[:name] %></td>
+ <td><%= order_item[:price] %></td>
+ <td><%= order_item[:unit] %></td>
+ <td><%= order_item[:paying] %></td>
 
 
 <% end %>
