@@ -14,13 +14,13 @@
 
  <% @ordered.each do |order_item| %>
 
- <tr><%= order_item[:name] %></tr>
+ <td><%= order_item[:name] %></td><td><%= order_item[:price] %></td>
 
 
 <% end %>
 
-Total Price:
-	 <tr><%= @total_price.to_s %></tr>
+<td>Total Price:
+	 <%= @total_price.to_s %></td>
 
 
 
