@@ -12,15 +12,15 @@
     <strong>Your Order</strong></td>
   </tr>
 
-<% @ordered.each do |order_item| %>
+ <% @ordered.each do |order_item| %>
 
-<%= order_item[:name] %>
+ <td><%= order_item[:name] %></td>
 
 
 <% end %>
 
 Total Price:
-	<%= @total_price.to_s %>
+	 <td><%= @total_price.to_s %></td>
 
 
 
