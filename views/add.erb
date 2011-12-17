@@ -6,14 +6,14 @@
     Name: <input type="text" name="name"/>
     Units: <input type="text" value="lb" name="units"/>
     Price: <input type="text" name="price"/>
-    Available: <input type="text" name="available"/><br/>
+    Available: <input type="text" name="quantity"/><br/>
     
     <input type="submit" value="Add Item"/>
   </form>
   
   <ul>
   <% @items.each do |item| %>
-    <li><%= item.name %> $<%= item.price %> per <%=item.units %> </li>
+    <li><%= item.name %> $<%= item.price %> per <%=item.units %> <%=item.quantity %> </li>
   <% end %>
   </ul>
   
