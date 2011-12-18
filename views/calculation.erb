@@ -7,9 +7,9 @@
   <td width="75" align="left"><strong>Price<br />
   </strong></td>
   <td width="75" align="left"><strong>Per Unit</strong><br /></td>
-  <td width="75" align="center"><strong>Your Order</strong></td><br />
+  <td width="75" align="right"><strong>Your Order</strong></td><br />
   <td width="75" align="right"> 
-    <strong>Price</strong></td>
+    <strong>Total</strong></td>
   </tr>
 
  <% @ordered.each do |order_item| %>
@@ -17,7 +17,7 @@
  <td><%= order_item[:name] %></td>
  <td>$<%= order_item[:price] %></td>
  <td><%= order_item[:units] %></td>
- <td><%= order_item[:quantity_ordered] %></td>
+ <td align="right"><%= order_item[:quantity_ordered] %></td>
  <td align="right">$<%= order_item[:paying] %></td>
 
 <% end %>
