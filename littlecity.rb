@@ -37,7 +37,8 @@ post "/form" do
     item.update(:quantity => item.quantity - quantity_ordered.to_f)
     @ordered = @ordered + [{:name => item.name, 
                             :paying => paying, 
-                            :price => item.price}] unless quantity_ordered.to_f == 0
+                            :price => item.price,
+                            :units => item.units}] unless quantity_ordered.to_f == 0
     @total_price = @total_price + paying
   end
   
