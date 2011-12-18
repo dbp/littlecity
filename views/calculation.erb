@@ -1,6 +1,6 @@
 <html>
 <body>
-<table width="550" align="center" cellpadding="1" cellspacing="0" class="menuborder">
+<table width="600" align="center" cellpadding="1" cellspacing="0" class="menuborder">
   <tr>
   <td width="200"><br />
     <strong>Item</strong><br> </td>
@@ -19,12 +19,11 @@
  <td><%= order_item[:unit] %></td>
  <td><%= order_item[:quantity_ordered] %></td>
  <td align="right">$<%= order_item[:paying] %></td>
-<tr></tr>
 
 <% end %>
-<tr>
-<tr>
-<td></td><td></td><td></td><td></td><td align="right">Total Order: $<%= @total_price.to_s %></td>
+
+<td></td><td></td><td></td><td></td><td align="right">Total Order: 
+$<%= @total_price.to_s %></td>
 
 
 
