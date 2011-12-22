@@ -14,17 +14,16 @@
 
 <a href="/add">add</a><br/>
 
-<form method="post" autocomplete="off">
+    
 
 <% @items.each do |item| %>
   <tr>
-              <td><%=item.name %><input type="text" value="<%=@item.name%>" name="item.name"/></td>
+              <td><%=item.name %></td>
               <td>$<%=item.price %> </td>
               <td><%=item.units %></td> 
               <td><%=item.quantity %></td>
               <td><a href="/edit?id=<%= item.id %>">edit</a></td>
     <td><a href="/remove?id=<%= item.id %>">remove</a></td>
-    <input type="submit" value="Update item"/>
 <% end %>
 </ul>
 
