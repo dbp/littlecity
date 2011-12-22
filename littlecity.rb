@@ -88,4 +88,3 @@ post "/remove" do
   item.destroy
   redirect "/list"
 end
-
