@@ -65,7 +65,8 @@ post "/add" do
   redirect "/list"
 end
 get "/edit" do
-@item = Item.get(params["id"].to_i)
+@items = Item.all
+@items.get(params["id"].to_i)
   erb :edit
 end
 
