@@ -2,15 +2,13 @@
 <body>
   
   <form method="post">
-  <% @items.each do |item| %>
-    <input type="text" value="<%=@item.name%>" name="name"/>
-    <input type="text" value="<%=@item.units%>" name="units"/>
-    <input type="text" value="<%=@item.price%>" name="price"/>
-    <input type="text" value="<%=@item.quantity%>" name="quantity"/><br/>
+  
+    Name: <input type="text" value="<%=@item.name%>" name="name"/>
+    Units: <input type="text" value="<%=@item.units%>" name="units"/>
+    Price: <input type="text" value="<%=@item.price%>" name="price"/>
+    Available: <input type="text" value="<%=@item.quantity%>" name="quantity"/><br/>
     
     <input type="submit" value="Edit Item"/>
-    <% end %>
-    
   </form>
   
 </body>

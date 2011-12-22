@@ -65,18 +65,20 @@ post "/add" do
   redirect "/list"
 end
 get "/edit" do
+@item = Item.get(params["id"].to_i)
   erb :edit
 end
 
 post "/edit" do
-  @items = Item.all
+  item = Item.get(params["id"].to_i)
   #item.update(params)
-  @items.update(:name => params["name"], 
+  item.update(:name => params["name"], 
               :units => params["units"], 
               :quantity => params["quantity"], 
               :price => params["price"].to_f)
   redirect "/list"
 end
+
 get "/remove" do
   erb :remove
 end
