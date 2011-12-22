@@ -46,8 +46,13 @@ post "/form" do
   erb :calculation
 end
 
-get "/list" do
+post "/list" do
   @items = Item.all
+  @items.update(:name => item.name,  
+                :price => item.price,
+                :units => item.units,
+                :quantity => item.quantity)
+  end
   erb :list
 end
 
