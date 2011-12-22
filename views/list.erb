@@ -14,11 +14,11 @@
 
 <a href="/add">add</a><br/>
 
-    
-<ul>
+<form method="post" autocomplete="off">
+
 <% @items.each do |item| %>
   <tr>
-              <td><%=item.name %></td>
+              <td><%=item.name %><input type="text" value="<%=@item.name%>" name="name"/></td>
               <td>$<%=item.price %> </td>
               <td><%=item.units %></td> 
               <td><%=item.quantity %></td>
