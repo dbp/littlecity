@@ -47,11 +47,11 @@ post "/form" do
 end
 
 post "/list" do
-  @items = Item.all
-  @items.update(:name => item.name,  
-                :price => item.price,
-                :units => item.units,
-                :quantity => item.quantity)
+
+  params.each do |item_id,item.name|
+    item = Item.get(item_id.to_i)
+    item.update(params)
+
   end
   erb :list
 end
