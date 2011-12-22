@@ -47,20 +47,7 @@ post "/form" do
 end
 
 get "/list" do
-@list = []
-  params.each do |item_id,item_name,item_price,item_units,item_available|
-    item = Item.get(item_id.to_i)
-   item.update(:name => item.name, 
-   				:paying => paying, 
-                :price => item.price,
-                :units => item.units,
-                :available => item.available)
-    @list = @list + [{:name => item.name, 
-                    	:paying => paying, 
-                        :price => item.price,
-                        :units => item.units,
-                        :available => item.available}] 
-  end
+  @items = Item.all
   erb :list
 end
 
