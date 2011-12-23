@@ -35,7 +35,6 @@ post "/form" do
     item = Item.get(item_id.to_i)
     paying = quantity_ordered.to_f * item.price
    item.update(:quantity => item.quantity - quantity_ordered.to_f) 
-   when :quantity <= 0 then item.quantity = "sold out"
     @ordered = @ordered + [{:name => item.name, 
                             :paying => paying, 
                             :price => item.price,
