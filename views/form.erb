@@ -22,7 +22,7 @@
               <td> $<%= item.price %> </td>
               <td> <%=item.units %></td> 
               <td align="center"> <%=if item.quantity <= 0 then "sold out" else item.quantity end%></td>
-<td align="center"><%if item.quantity > 0 then%> <input size="3" maxlength="3" type="float" name="<%= item.id %>"/><%end%><br/></td> end%>
+<td align="center"><%if item.quantity > 0 then%> <input size="3" maxlength="3" type="float" name="<%= item.id %>"/><%end%><br/></td>
 
 <% end %>
   <br>
