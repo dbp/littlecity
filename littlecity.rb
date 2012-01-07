@@ -88,7 +88,8 @@ post "/edit" do
   item.update(:name => params["name"], 
               :units => params["units"], 
               :quantity => params["quantity"], 
-              :price => params["price"].to_f)
+              :price => params["price"].to_f,
+              :category => Category.get(params["category"]))
   redirect "/list"
 end
 
