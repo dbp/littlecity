@@ -26,8 +26,8 @@ class Category
 end
 
 # automatically create the post table
-Item.auto_migrate! #unless Item.storage_exists?
-Category.auto_migrate!
+Item.auto_migrate! unless Item.storage_exists?
+Category.auto_migrate! unless Category.storage_exists?
 DataMapper.finalize
 
 get "/" do
