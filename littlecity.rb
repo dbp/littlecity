@@ -12,11 +12,22 @@ class Item
   property :quantity, Float
   property :units, String
   property :price, Float
+
+  belongs_to :category
+end
+
+class Category
+  include DataMapper::Resource
   
+  property :id, Serial
+  property :name, String
+  
+  has n, :items
 end
 
 # automatically create the post table
-Item.auto_migrate! unless Item.storage_exists?
+Item.auto_migrate! #unless Item.storage_exists?
+Category.auto_migrate!
 DataMapper.finalize
 
 get "/" do
@@ -87,4 +98,41 @@ post "/remove" do
   item = Item.get(params["id"].to_i)
   item.destroy
   redirect "/list"
+end
+
+get "/list_categories" do
+  @categories = Category.all
+  erb :list_categories
+end
+
+get "/add_category" do
+  @categories = Category.all
+  erb :add_category
+end
+
+post "/add_category" do
+  Category.create(:name => params["name"])
+              
+  redirect "/list_categories"
+end
+get "/edit_category" do
+@category = Category.get(params["id"].to_i)
+  erb :edit_category
+end
+
+post "/edit_category" do
+  category = Category.get(params["id"].to_i)
+  category.update(:name => params["name"])
+             
+  redirect "/list_categories"
+end
+
+get "/remove_category" do
+  erb :remove
+end
+
+post "/remove_category" do
+  category = Category.get(params["id"].to_i)
+  category.destroy
+  redirect "/list_category"
 end
