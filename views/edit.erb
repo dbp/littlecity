@@ -7,7 +7,7 @@
     Category: 
     <select name="category">
     <% @categories.each do |category| %>
-    	<option <%= if category == @item.category then "selected" %> value="<%= category.id %>"><%= category.name %></option>
+    	<option <%= if category == @item.category then "selected" end %> value="<%= category.id %>"><%= category.name %></option>
     <% end %>
     </select>
     Units: <input type="text" value="<%=@item.units%>" name="units"/>
