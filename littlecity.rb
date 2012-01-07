@@ -34,7 +34,7 @@ post "/form" do
   params.each do |item_id,quantity_ordered|
     item = Item.get(item_id.to_i)
     paying = quantity_ordered.to_f * item.price
-   item.update(:quantity => item.quantity - quantity_ordered.to_f) 
+   item.update(:quantity => item.quantity - quantity_ordered.to_f)
     @ordered = @ordered + [{:name => item.name, 
                             :paying => paying, 
                             :price => item.price,
