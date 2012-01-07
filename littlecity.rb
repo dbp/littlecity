@@ -71,7 +71,8 @@ post "/add" do
   Item.create(:name => params["name"], 
               :units => params["units"], 
               :quantity => params["quantity"], 
-              :price => params["price"].to_f)
+              :price => params["price"].to_f,
+              :category => Category.first)
               
   redirect "/list"
 end
