@@ -5,6 +5,7 @@
   <tr>
   <td width="200"><br />
     <strong>Product List 6/17/11</strong><br> </td>
+    <td>Category</td>
   <td width="75" align="left"><strong>Price<br />
   </strong></td>
   <td width="75" align="left"><strong>Per Unit</strong><br /></td>
@@ -19,6 +20,7 @@
 <% @items.each do |item| %>
   <tr>
               <td><%=item.name %></td>
+              <td><%=item.category %></td>
               <td>$<%=item.price %> </td>
               <td><%=item.units %></td> 
               <td><%=item.quantity %></td>

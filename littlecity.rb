@@ -64,6 +64,7 @@ end
 
 get "/add" do
   @items = Item.all
+  @categories = Category.all
   erb :add
 end
 
@@ -72,7 +73,7 @@ post "/add" do
               :units => params["units"], 
               :quantity => params["quantity"], 
               :price => params["price"].to_f,
-              :category => Category.first)
+              :category => Category.get(params["category"]))
               
   redirect "/list"
 end

@@ -4,6 +4,12 @@
   <form method="post">
   
     Name: <input type="text" name="name"/>
+    Category: 
+    <select name="category">
+    <% @categories.each do |category| %>
+    	<option value="<%= category.id %>"><%= category.name %></option>
+    <% end %>
+    </select>
     Units: <input type="text" value="lb" name="units"/>
     Price: <input type="text" name="price"/>
     Available: <input type="text" name="quantity"/><br/>
