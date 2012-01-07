@@ -20,7 +20,7 @@
 <% @items.each do |item| %>
   <tr>
               <td><%=item.name %></td>
-              <td><%=item.category %></td>
+              <td><%=item.category.name %></td>
               <td>$<%=item.price %> </td>
               <td><%=item.units %></td> 
               <td><%=item.quantity %></td>
