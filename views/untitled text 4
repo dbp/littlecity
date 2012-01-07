@@ -1,0 +1,35 @@
+I made some changes to list, here is the work so far... (it doesn't work)
+
+<html>
+<body>
+
+<table width="700" align="center" cellpadding="1" cellspacing="0" class="menuborder">
+  <tr>
+  <td width="200"><br />
+    <strong>Product List 6/17/11</strong><br> </td>
+  <td width="75" align="left"><strong>Price<br />
+  </strong></td>
+  <td width="75" align="left"><strong>Per Unit</strong><br /></td>
+  <td width="75" align="center"><strong>Amount Available</strong></td><br />
+    
+  </tr>
+
+<a href="/add">add</a><br/>
+
+<form method="post" autocomplete="off">
+<% @items.each do |item| %>
+  <tr>
+              <td><input type="text" value="<%=@item.name%>" name="item.name"/></td>
+              <td>$<input type="text" value="<%=@item.price%>" name="item.price"/></td>
+              <td><input type="text" value="<%=@item.units%>" name="item.units"/></td> 
+              <td><input type="text" value="<%=@item.quantity%>" name="item.quantity"/></td>
+              
+        <input type="submit" value="Make all Changes"/>
+              
+    <td><a href="/remove?id=<%= item.id %>">remove</a></td>
+<% end %>
+</ul>
+
+</body>
+</html>
+
